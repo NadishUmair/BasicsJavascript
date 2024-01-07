@@ -302,3 +302,115 @@
 // }
 // let a="Certainly! Here's another JavaScript question for you:"
 // revSentence(a);
+
+
+
+// ################## factorial of number #######################
+// function findfactorial(getnum){
+
+//   let b=1;
+//     for(var i=getnum;i>=1;i--){
+      
+//        b *=i;
+    
+//     }
+//    return b;
+// }
+
+// let a=5;
+// let result=findfactorial(a);
+// console.log(result)
+
+
+// ################### palindrome ####################
+
+// function ispalindrome(getstr){
+//       let newstr='';
+//     for(var i=getstr.length-1;i>=0;i--){
+//       newstr +=getstr[i];
+//     }
+  
+//   if(getstr===newstr){
+//     console.log('is palindrome')
+//   }else{
+//     console.log('not palindrome');
+//   }
+//   return newstr;
+// }
+// let str="level"
+// let result=ispalindrome(str)
+
+
+
+// function convert(getarray){
+//    console.log(getarray);
+//    let reversed = "";
+    // for(let i = getarray.length; i>=1 ; i--){
+    //     reversed += getarray[i-1];
+    // }
+    // for(let i of getarray)
+    // {
+    //     reversed += i
+    // }
+    // let i=getarray.length
+    // while(i>=1){
+    //     reversed += getarray[i-1];
+    //     i--;
+    // }
+
+//     let i=getarray.length
+//     do {
+//         reversed += getarray[i-1];
+//         i--;
+
+//     } while (i>0);
+//    return reversed;
+// }
+// let array=['a','b','c','h','k'];
+// console.log(convert(array));
+
+
+
+// function calculate(width,height){
+//    return width*height
+// }
+// console.log(calculate(6,7))
+
+
+// function findDuplicate(getarray){
+// var newarray=[""]
+//     for(let i=0;i<getarray.length;i++){
+//        for(let n=i+1;n<getarray.length;n++){
+//            if(getarray[i]==getarray[n]){
+//            newarray +=getarray[i];
+//            }
+//        }
+//     }
+//     return newarray;
+// }
+// let array=[1,3,4,5,6,7,3,2,4]
+// console.log(findDuplicate(array))
+
+function flattenArray(getarray){
+    var makearray=[];
+   for(i=0;i<getarray.length;i++){
+    if(Array.isArray(getarray[i])){
+        let nestedfirst=getarray[i]
+    for(n=0;n<nestedfirst.length;n++){
+        let secondnested=nestedfirst[n];
+        if(Array.isArray(secondnested)){
+            for(m=0;m<secondnested.length;m++){
+                makearray.push(secondnested[m]);
+            }
+        }else{
+            makearray.push(nestedfirst[n])
+        }
+    }
+    }else{
+        makearray.push(getarray[i]);
+    }
+   }
+   return makearray;
+}
+let array=[1,[2,[3,4],5],6];
+console.log(flattenArray(array))
