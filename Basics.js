@@ -391,26 +391,70 @@
 // let array=[1,3,4,5,6,7,3,2,4]
 // console.log(findDuplicate(array))
 
-function flattenArray(getarray){
-    var makearray=[];
-   for(i=0;i<getarray.length;i++){
-    if(Array.isArray(getarray[i])){
-        let nestedfirst=getarray[i]
-    for(n=0;n<nestedfirst.length;n++){
-        let secondnested=nestedfirst[n];
-        if(Array.isArray(secondnested)){
-            for(m=0;m<secondnested.length;m++){
-                makearray.push(secondnested[m]);
-            }
-        }else{
-            makearray.push(nestedfirst[n])
-        }
-    }
-    }else{
-        makearray.push(getarray[i]);
-    }
-   }
-   return makearray;
-}
-let array=[1,[2,[3,4],5],6];
-console.log(flattenArray(array))
+
+// faltten Array 
+// function flattenArray(getarray){
+//     var makearray=[];
+//    for(i=0;i<getarray.length;i++){
+//     if(Array.isArray(getarray[i])){
+//         let nestedfirst=getarray[i]
+//     for(n=0;n<nestedfirst.length;n++){
+//         let secondnested=nestedfirst[n];
+//         if(Array.isArray(secondnested)){
+//             for(m=0;m<secondnested.length;m++){
+//                 makearray.push(secondnested[m]);
+//             }
+//         }else{
+//             makearray.push(nestedfirst[n])
+//         }
+//     }
+//     }else{
+//         makearray.push(getarray[i]);
+//     }
+//    }
+//    return makearray;
+// }
+// let array=[1,[2,[3,4],5],6];
+// console.log(flattenArray(array))
+
+// sum of all numbers of array
+// function sumarray(getarray){
+//     var newarray=0;
+//    for(let i=0;i<getarray.length;i++){
+//        newarray +=getarray[i];
+
+//    }
+//    return newarray;
+// }
+
+// let array=[2,3,4,5,6];
+// console.log(sumarray(array))
+
+// using reduced in js
+
+// function sumarray(getarray){
+//     const sum=getarray.reduce((a,b)=>{
+//         return a+b
+
+//     })
+//     return sum;
+// }
+// let array=[2,3,5,6,7,8];
+// console.log(sumarray(array))
+
+// check vowels in string
+
+// function checkvowels(getstr){
+//     var vowels='';
+//     let count=0;
+//    for(let i=0;i<getstr.length;i++){
+//       if(getstr[i]=== 'a' || getstr[i]==='e' || getstr[i]==='i'|| getstr[i]=== 'o'||getstr[i]=== 'u'){
+//           vowels +=getstr[i];
+//           count++;
+//       }
+//    }
+//    return {vowels,count};
+// }
+// let str='my name is nadish umair';
+// console.log(checkvowels(str).vowels)
+// console.log(checkvowels(str).count)
